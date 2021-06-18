@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>History API Example</h1>
+        <p>Hi, this is an example of the History API's.</p>
+
+        <p>Current page: <span id="page-name">None</span></p>
+        
+        <button id="home">Home</button>
+        <button id="page1">Page 1</button>
+        <button id="page2">Page 2</button>
+
+        <script>
+            let currentPage = "home";
+
+            function setPage(name) {
+                document.getElementById("page-name").innerText = name;
+                document.title = name;
+            }
+
+            document.getElementById("home").addEventListener("click", function() {
+                history.pushState({ currentPage: "home" }, "Home", "home")
+                setPage("home")
+            })
+            document.getElementById("page1").addEventListener("click", function() {
+                history.pushState({ currentPage: "page1" }, "Page 1", "page1")
+                setPage("page1")
+            })
+
+            // Create push pop listener that will execute undo actions
+            window.addEventListener("popstate", (event) => {
+                console.log(event);
+                if (event.state) {
+                    setPage(event.state.currentPage)
+                }
+            });
+        </script>
+    </body>
+</html>
