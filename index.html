@@ -30,6 +30,10 @@
                 history.pushState({ currentPage: "page1" }, "Page 1", "page1")
                 setPage("page1")
             })
+            document.getElementById("page2").addEventListener("click", function() {
+                history.pushState({ currentPage: "page2" }, "Page 2", "page2")
+                setPage("page2")
+            })
 
             // Create push pop listener that will execute undo actions
             window.addEventListener("popstate", (event) => {
