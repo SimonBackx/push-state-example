@@ -1,6 +1,8 @@
 # push-state-example
 Demonstration of History API bug in DuckDuckGo's browser for iOS
 
+Link to issue: https://github.com/duckduckgo/iOS/issues/901
+
 ## Environment
 
 - App version: 7.63.7.0
