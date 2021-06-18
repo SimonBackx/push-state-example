@@ -2,9 +2,10 @@
 Demonstration of History API bug in DuckDuckGo's browser for iOS
 
 ## Environment
-App version: 7.63.7.0
-Device model: iPhone 12 pro
-iOS version: 14.6
+
+- App version: 7.63.7.0
+- Device model: iPhone 12 pro
+- iOS version: 14.6
 
 ## Steps to reproduce the bug
 
